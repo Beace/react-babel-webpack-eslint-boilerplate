@@ -1,6 +1,6 @@
 # react-babel-webpack-eslint-boilerplate
 
-react-babel-webpack-eslint-boilerplate
+React-babel-webpack-eslint-boilerplate is a webpack configuration for a lightweight development environment for building react projects, using the following technology stack. You can directly fork to your project and modify the relevant path after use.
 
 # Tech Stacks
 
