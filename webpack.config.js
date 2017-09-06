@@ -7,7 +7,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   entry: [
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    'webpack-hot-middleware/client?path=/__webpack_hmr',
     path.join(process.cwd(), 'app/app.js'),
   ],
   output: {
@@ -34,9 +34,6 @@ module.exports = {
         exclude: /(node_modules|bower_components|public\/)/,
         loaders: 'babel-loader',
         include: path.join(__dirname, 'app'),
-        query: {
-          presets: ['react-hmre'],
-        },
       },
       {
         test: /\.css$/,
