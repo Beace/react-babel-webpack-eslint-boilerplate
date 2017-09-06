@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Home = () =>
-  (<div>
-    <h1>Welcome to the To React-Babel-ESLint-Webpack-Boilerplate</h1>
-  </div>);
+class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: 'React',
+      ticking: 0,
+    };
+  }
+
+  onClick = (e) => {
+    e.preventDefault();
+    this.setState({
+      ticking: this.state.ticking + 1,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.onClick}>ticking</button>
+        <p>
+          {this.state.ticking}
+        </p>
+      </div>
+    );
+  }
+}
 
 export default Home;

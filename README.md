@@ -20,8 +20,11 @@ webpack built ce3e0293c04ca359df65 in 3566ms
 - react-router-dom: "^4.2.2"
 - babel-eslint: "^7.2.3",
 - babel-loader: "^7.1.2",
-- babel-preset-es2017: "^6.24.1",
+- babel-preset-env: "^1.6.0",
+- babel-preset-es2015: "^6.24.1",
 - babel-preset-react: "^6.24.1",
+- babel-preset-react-hmre: "^1.1.1",
+- babel-preset-stage-0: "^6.24.1",
 - eslint: "^4.6.0",
 - eslint-config-airbnb: "^15.1.0",
 - eslint-loader: "^1.9.0",

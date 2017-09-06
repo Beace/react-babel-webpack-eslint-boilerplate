@@ -1,13 +1,24 @@
 import React from 'react';
 
-const Schedule = () =>
-  (<div>
-    <ul>
-      <li>6/5 @ Evergreens</li>
-      <li>6/8 vs Kickers</li>
-      <li>6/14 @ United</li>
-      <li>6/14 @ United</li>
-    </ul>
-  </div>);
+class Schedule extends React.Component {
+  state = {
+    ticking: 0,
+  }
+
+  onClick = () => {
+    this.setState({
+      ticking: this.state.ticking + 1,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        {this.state.ticking}
+        <button onClick={this.onClick}>ticking</button>
+      </div>
+    );
+  }
+}
 
 export default Schedule;

@@ -1,6 +1,7 @@
 {
   "presets": [
-    "es2017",
-    "react"
+    "react",
+    "es2015",
+    "stage-0"
   ]
 }
