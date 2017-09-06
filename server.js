@@ -13,9 +13,7 @@ if (process.env.NODE_ENV === 'development') {
       noInfo: true,
       publicPath: webpackConfig.output.publicPath,
       silent: true,
-      stats: {
-        colors: true
-      },
+      stats: 'errors-only',
     })
   );
 
