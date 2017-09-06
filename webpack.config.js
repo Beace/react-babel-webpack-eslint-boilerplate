@@ -15,7 +15,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/',
   },
-  devtool: '#source-map',
+  devtool: 'cheap-module-eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
