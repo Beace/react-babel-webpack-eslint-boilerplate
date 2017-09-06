@@ -2,6 +2,17 @@
 
 React-babel-webpack-eslint-boilerplate is a webpack configuration for a lightweight development environment for building react projects, using the following technology stack. You can directly fork to your project and modify the relevant path after use.
 
+# Run
+
+```
+$ npm intall
+$ npm start
+> NODE_ENV=development node server
+
+Listening at http://localhost:3000/
+webpack built ce3e0293c04ca359df65 in 3566ms
+```
+
 # Tech Stacks
 
 - express: "^4.15.4",
