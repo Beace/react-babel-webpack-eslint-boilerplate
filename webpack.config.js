@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -11,15 +12,32 @@ module.exports = {
     path.join(process.cwd(), 'app/app.js'),
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/',
+    path: path.join(__dirname, 'build'),
+    publicPath: '/',
+    filename: '[name].js',
   },
   devtool: 'cheap-module-eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    // 动态 append js
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.join(process.cwd(), 'index.html'),
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      children: true,
+      minChunks: 2,
+      async: true,
+    }),
+    // for prd
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compressor: {
+    //     warnings: false,
+    //   },
+    // }),
   ],
   module: {
     loaders: [

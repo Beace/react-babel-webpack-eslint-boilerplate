@@ -19,7 +19,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.onClick}>ticking</button>
+        <button onClick={this.onClick}>ticking1</button>
         <p>
           {this.state.ticking}
         </p>
